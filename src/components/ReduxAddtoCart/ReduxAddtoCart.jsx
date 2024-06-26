@@ -10,7 +10,7 @@ function ReduxAddToCart({ product }) {
         dispatch(addToCart(product));
     }
     function decrease() {
-     //dispatch({type: , payload: })
+        //dispatch({type: , payload: })
         dispatch(removeFromCart(product));
     }
 

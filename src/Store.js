@@ -19,7 +19,7 @@ export function removeFromCart(product){
 
 function cartReducer(state = {items:{}}, action) {
     switch (action.type) {
-        case "ADD_TO_CART":{
+        case ADD_TO_CART:{
             const product = action.payload;
             if(state.items[product.id]){
                 return {
@@ -46,7 +46,7 @@ function cartReducer(state = {items:{}}, action) {
                 }
             }
         }
-        case "REMOVE_FROM_CART":{
+        case REMOVE_FROM_CART:{
             const product = action.payload;
             if(state.items[action.payload.id].quantity <= 1){
                 return {
