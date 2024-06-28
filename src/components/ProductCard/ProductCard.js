@@ -26,6 +26,7 @@ function ProductCard({ product }) {
     <div className="product-card">
       <p onClick={printTitle}> {product.title}</p>
       <p ref={pRef}> {product.price.value}</p>
+      <p>Category: {product.category}</p>
       <img src={logo1} />
       <input type="text" onChange={displayOutput} ref={iRef} value={inputV} />
       <p ref={oRef}>Over here the output would arrive - {inputV}</p>

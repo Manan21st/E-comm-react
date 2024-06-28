@@ -1,6 +1,7 @@
 import ProductCard from "../ProductCard/ProductCard";
 import Effect from "../Effect/Effect";
 import React from "react";
+import Categories from "../Categories/Categories";
 import { useState, useEffect } from "react";
 import useWindowSize from "../../hooks/useWindowSize";
 function Products() {
@@ -10,7 +11,7 @@ function Products() {
   console.log("products");
   console.log(useWindowSize());
   useEffect(() => {
-    fetch("https://run.mocky.io/v3/1c9a787b-3e6b-4fc2-9460-f908e2e3cc29").then(
+    fetch("https://602fc537a1e9d20017af105e.mockapi.io/api/v1/products").then(
       (response) => {
         return response.json();
       }
@@ -24,7 +25,8 @@ function Products() {
     return (
       <div>
           <div><Effect /></div>
-            {
+          <Categories/>
+            { 
                 products.map(function (item, index) {
                   return (<ProductCard key={index}  product={item} />)
                 })

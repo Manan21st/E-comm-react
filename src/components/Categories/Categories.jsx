@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { loadCategories } from "../../store/categories";
+import { loadCategories } from "../../stores/Categories";
 import { useDispatch } from "react-redux";
 
 function Categories(){
